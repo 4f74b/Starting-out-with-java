@@ -6,6 +6,6 @@ public class ShowNames {
         String name;
         name=JOptionPane.showInputDialog("Enter Your name");
         
-        JOptionPane.showMessageDialog(null, "Your name is: " + name);
+        JOptionPane.showMessageDialog(null, "Your name might be: " + name);
     }    
 }
