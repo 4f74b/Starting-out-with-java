@@ -12,7 +12,7 @@ public class PyramidalAsterisks {
                     break;
                 }
                 else{
-                    System.out.print('#');
+                    System.out.print(' ');
                 }
             }
             System.out.println();
