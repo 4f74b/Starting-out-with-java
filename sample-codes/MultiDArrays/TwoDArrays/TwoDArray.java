@@ -29,6 +29,9 @@ public class TwoDArray{
             System.out.println();
         }
 
+        System.out.println("Number of Rows: "+array.length);
+        System.out.println("Numbrer of Columns: "+ array[0].length);
+
     }
 
 
