@@ -5,8 +5,8 @@ public class DemoSelectionSort{
         SelectionSort ss= new SelectionSort(array);
         array=ss.sort();
 
-        // for (int i=0; i<array.length; i++){
-        //     System.out.print(array[i]+", ");
-        // }
+        for (int i=0; i<array.length; i++){
+            System.out.print(array[i]+", ");
+        }
     }
 }
