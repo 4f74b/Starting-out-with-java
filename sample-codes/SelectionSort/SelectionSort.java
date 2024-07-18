@@ -7,15 +7,15 @@ public class SelectionSort{
 
     public int[] sort(){
         int smallestEl=array[0];
-        int temp=0;
-        for (int i=0; i<array.length; i++){
-            if (array[i]<smallestEl){
-                temp=smallestEl;
-                array[0]=smallestEl;
-                smallestEl=array[0];
-                array[i]=temp;
-
+        int tempIndex=0;
+        for (int j=0; j<array.length; j++){
+            for (int i=0; i<array.length; i++){
+                if (array[i]<smallestEl){
+                    tempIndex=i;
+                }
             }
+            array[0]=array[tempIndex];
+            array[tempIndex]=smallestEl;
         }
         return array;
     }
