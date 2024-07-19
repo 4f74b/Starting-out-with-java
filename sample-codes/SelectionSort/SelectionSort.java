@@ -1,22 +1,42 @@
-public class SelectionSort{
+import javax.sound.midi.SysexMessage;
+
+public class SelectionSort {
     int[] array;
 
-    public SelectionSort(int[] arr){
-        array=arr;
+    public SelectionSort(int[] arr) {
+        array = arr;
     }
 
-    public int[] sort(){
-        int smallestEl=array[0];
-        int tempIndex=0;
-        for (int j=0; j<array.length; j++){
-            for (int i=0; i<array.length; i++){
-                if (array[i]<smallestEl){
-                    tempIndex=i;
+    public int[] sort() {
+        int smallestIndex, smallestValue,temp;
+
+        // for (int startScan = 0; startScan < (array.length - 1); startScan++) {
+        //     smallestIndex = startScan;
+        //     smallestValue = array[startScan];
+        //     for (int index = startScan + 1; index < array.length; index++) {
+        //         if (array[index] < smallestValue) {
+        //             smallestValue = array[index];
+        //             smallestIndex = index;
+        //         }
+        //     }
+
+        //     array[smallestIndex] = array[startScan];
+        //     array[startScan] = smallestValue;
+
+        // }
+
+        for (int startScan=0; (startScan<array.length-1); startScan++){
+            smallestIndex=startScan;
+            for (int index=startScan; index<array.length; index++){
+                if (array[index] < array[smallestIndex]){
+                    smallestIndex=index;
                 }
             }
-            array[0]=array[tempIndex];
-            array[tempIndex]=smallestEl;
+            temp=array[startScan];
+            array[startScan]=array[smallestIndex];
+            array[smallestIndex]=temp;
         }
+
         return array;
     }
 }

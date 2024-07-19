@@ -1,6 +1,6 @@
 public class DemoSelectionSort{
     public static void main(String[] args){
-        int[] array= {3,6,23,7,1,3,7};
+        int[] array= {13,6,7,11,34,4,91,8,7};
 
         SelectionSort ss= new SelectionSort(array);
         array=ss.sort();
